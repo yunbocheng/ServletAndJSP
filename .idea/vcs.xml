@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Cookie订餐会员卡" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HttpSession接口-购物车管理系统" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/JavaWeb" vcs="Git" />
   </component>
 </project>

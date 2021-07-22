@@ -581,9 +581,65 @@
 
 2. 命令实现：OneServlet通过请求转发申请调用TwoServlet时，需要给TwoServlet提供共享数据
 
-   ​
+
    ![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210722153625.png)
-   
-   
 
    
+
+   ## 20.Servlet规范扩展  -------- 监听器接口
+
+   1. 介绍：
+
+      - 一组来自于Servlet规范下接口，共有8个。在Tomcat存在servlet-api.jar包
+      - 监听器接口需要由开发人员亲自实现，Http服务器提供jar包并没有提供对应的实现类
+      - 监听器接口用于监控【作用域对象声明周期变化时刻】以及【作用域对象共享数据变化时刻】
+
+   2. 作用域对象：
+
+      - 在Servlet规范下，认为在服务端内存中可以在某些条件下为两个Servlet之间提供数据共享方案的对象，被称为【作用域对象】
+
+      - Servlet规范下作用域对象：
+
+        ServletContext :        全局作用域对象
+
+        HttpSession :             会话作用域对象
+
+        HttpServletResquest : 请求作用域对象
+
+   3. 监听器接口实现开发规范：三步
+
+      - 根据监听的实际情况，选择对应监听器接口进行实现。
+      - 重写监听器接口声明【监听事件处理方法】
+      - 在web,xml文件将监听器接口实现类注册到Http服务器
+
+   4. ServletContextListener接口：
+
+      1. 作用：通过这个接口合法的检测全局作用域对象初始化时刻以及被销毁时刻。
+
+      2. 监听事件处理方法：
+
+         publlic void contextInitlized() : 在全局作用域对象被初始化被调用
+
+         public void contextDestory() : 在全局作用域对象被Http服务器销毁的时候被触发调用
+      
+   5. ServletContextAttributeListener接口：
+
+      1. 作用：通过这个接口合法的检测全局作用域对象共享数据变化时刻
+
+      2. 监听事件处理方法：
+
+         publlic void contextAdd() : 在全局作用域对象添加共享数据
+
+         publlic void contextReplaced() : 在全局作用域对象更新共享数据
+
+         publlic void contextRemove() : 在全局作用域对象删除共享数据
+
+   6. 全局作用域对象共享数据数据变化时刻：
+
+      ![image-20210722201349902](https://gitee.com/YunboCheng/imageBad/raw/master/image/image-20210722201349902.png)
+
+## 21. Servlet规范扩展 ----------- Filter（过滤接口）
+
+1. 介绍：
+
+    
