@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cookie订餐会员卡/Cookie订餐会员卡.iml" filepath="$PROJECT_DIR$/Cookie订餐会员卡/Cookie订餐会员卡.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpServletRequest接口介绍/HttpServletRequest接口介绍.iml" filepath="$PROJECT_DIR$/HttpServletRequest接口介绍/HttpServletRequest接口介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpServletResponse接口介绍/HttpServletResponse接口介绍.iml" filepath="$PROJECT_DIR$/HttpServletResponse接口介绍/HttpServletResponse接口介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpServletResquest接口实现数据共享/HttpServletResquest接口实现数据共享.iml" filepath="$PROJECT_DIR$/HttpServletResquest接口实现数据共享/HttpServletResquest接口实现数据共享.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpSession接口-购物车管理系统/HttpSession接口-购物车管理系统.iml" filepath="$PROJECT_DIR$/HttpSession接口-购物车管理系统/HttpSession接口-购物车管理系统.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JavaWebProject.iml" filepath="$PROJECT_DIR$/.idea/JavaWebProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServletContext/ServletContext.iml" filepath="$PROJECT_DIR$/ServletContext/ServletContext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/在线考试管理系统开发环境搭建/在线考试管理系统开发环境搭建.iml" filepath="$PROJECT_DIR$/在线考试管理系统开发环境搭建/在线考试管理系统开发环境搭建.iml" />
+      <module fileurl="file://$PROJECT_DIR$/在线考试管理系统开发环境搭建1/在线考试管理系统开发环境搭建1.iml" filepath="$PROJECT_DIR$/在线考试管理系统开发环境搭建1/在线考试管理系统开发环境搭建1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/多个Servlet之间的请求规则/多个Servlet之间的请求规则.iml" filepath="$PROJECT_DIR$/多个Servlet之间的请求规则/多个Servlet之间的请求规则.iml" />
+    </modules>
+  </component>
+</project>

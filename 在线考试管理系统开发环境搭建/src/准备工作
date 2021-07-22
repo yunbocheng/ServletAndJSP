@@ -1,0 +1,30 @@
+任务：在线考试管理系统------用户信息管理模块
+
+子任务：
+    用户信息注册
+    用户信息查询
+    用户信息删除
+    用户信息更新（自己练习）
+
+准备工作：
+     1、 创建用户信息表 Users.frm
+
+     CREATE TABLE Users(
+
+        userId int primary key auto_increment,  # 用户编号
+        userName varchar(50),   # 用户名称
+        userword varchar(50),   # 用户密码
+        sex    char(1),         # 用户性别
+        email    varchar(50)    # 用户邮箱
+     );
+     auto_increment,自增序列  i++
+     在插入时，如果不给定具体用户编号，此时根据auto_increment的值递增添加。
+
+    2. 在 src下，com.yunbocheng.entity.Users 实体类
+
+    3. 在 src 下，com.yunbocheng.util.JdbcUtil 工具类【复用】
+
+    4. 在 web 下WEB-INF 下创建lib文件夹 ，存放mysql提供的JDBC实现类jar包。
+
+    【重点：用户注册流程图】
+
