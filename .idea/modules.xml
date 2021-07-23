@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Cookie订餐会员卡/Cookie订餐会员卡.iml" filepath="$PROJECT_DIR$/Cookie订餐会员卡/Cookie订餐会员卡.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpServletRequest接口介绍/HttpServletRequest接口介绍.iml" filepath="$PROJECT_DIR$/HttpServletRequest接口介绍/HttpServletRequest接口介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpServletRequest接口实现数据共享/HttpServletRequest接口实现数据共享.iml" filepath="$PROJECT_DIR$/HttpServletRequest接口实现数据共享/HttpServletRequest接口实现数据共享.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpServletResponse接口介绍/HttpServletResponse接口介绍.iml" filepath="$PROJECT_DIR$/HttpServletResponse接口介绍/HttpServletResponse接口介绍.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HttpServletResquest接口实现数据共享/HttpServletResquest接口实现数据共享.iml" filepath="$PROJECT_DIR$/HttpServletResquest接口实现数据共享/HttpServletResquest接口实现数据共享.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpSession接口-购物车管理系统/HttpSession接口-购物车管理系统.iml" filepath="$PROJECT_DIR$/HttpSession接口-购物车管理系统/HttpSession接口-购物车管理系统.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP文件Java命令书写规则/JSP文件Java命令书写规则.iml" filepath="$PROJECT_DIR$/JSP文件Java命令书写规则/JSP文件Java命令书写规则.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP文件使用展示/JSP文件使用展示.iml" filepath="$PROJECT_DIR$/JSP文件使用展示/JSP文件使用展示.iml" />
