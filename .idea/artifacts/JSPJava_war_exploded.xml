@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JSP文件内置Java对象:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JSPJava_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JSP文件内置Java对象/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JSP文件内置Java对象" />
+        </element>
+      </element>
+      <element id="library" level="project" name="jsp-api" />
+    </root>
+  </artifact>
+</component>

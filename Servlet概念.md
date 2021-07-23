@@ -307,7 +307,7 @@
 
 ## 11.重定向解决方案
 
-1. 工作原理：用户第一次通过【手动方式】通知浏览器访问OneServlet，OneServlet工作完毕，  				   后，将TwoServlet地址写入到响应头location属性中，导致Tomcat将302 的状态码				   写入到状态行。
+1. 工作原理：用户第一次通过【手动方式】通知浏览器访问OneServlet，OneServlet工作完毕后，将TwoServlet地址写入到响应头location属性中，导致Tomcat将302 的状态码写入到状态行。
 
    ​					在浏览器接收到这个相应包之后，会读取到302状态，此时浏览器自动根据响应头
 
@@ -640,6 +640,138 @@
 
 ## 21. Servlet规范扩展 ----------- Filter（过滤接口）
 
-1. 介绍：
+ <img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210723083510.png" style="zoom: 67%;" />
+
+ <img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210723084527.png" style="zoom: 67%;" />
+
+## 22.过滤器对拦截的请求进行增强操作
+
+<img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210723105012.png" style="zoom:50%;" />
+
+上边的这个图代表的是一个服务端，里边存在100的Servlet。每次在调用任何一个Servlet的时候，都需要使用doPost方法，
+
+在使用doPos方法的时候，必须得对编码方式进行重写，因为doPost的默认编码方式不是utf-8，编译中文的时候会出现乱码
+
+这个时候要对100个Servlet都进行重新编译，很麻烦，此时就可以使用监听器，将100个Servlet都进行过滤，在过滤的时候为
+
+每一个Servlet加上req,setCharacterEncoding(utf-8)的方法，这样就可以一次将100个Servlet进行重新编码处理，极大的节了
+
+开发时间。
+
+## 23.Filter拦截地址格式
+
+1. 命令格式：
+
+   ```xml
+   <filter-mapping>
+       <fileter-name>OneFilter</fileter-name>
+       <url-pattern>拦截地址</url-pattern>
+   </filter-mapping>
+   ```
 
     
+
+2. 命令作用：
+
+   拦截地址通知Tomcat该调用何种资源文件之前需要调用OneFilter过滤进行拦截
+
+3. 要求Tomcat在调用某一个具体文件之前，来调用OneFilter拦截（练习使用）
+
+   ```xml
+   <url-pattern>/img/帅哥.jpg</url-pattern>  // 此时拦截的就是img文件夹下的帅哥.jpg
+   ```
+
+4. 要求Tomcat在调用某一个文件夹下所有的资源文件之前来调用OneFilter拦截（开发使用）
+
+   ```xml
+   <url-pattern>/img/*</url-pattern>  //此时拦截的是img文件夹下的所有文件
+   ```
+
+5. 要求Tomcat在调用任意文件夹下某种类型文件之前，来调用OneFilter拦截（开发使用）
+
+   ```xml
+   <url-pattern>*.jpg</url-pattern>  // 此时拦截的是任意文件夹下的jpg文件
+   ```
+
+6. 要求Tomcat调用网站中任意文件，来调用OneFilter拦截
+
+   ```xml
+   <url-pattern>*</url-pattern>   // 此时拦截的是网站中所有的文件
+   ```
+
+
+
+## 24.过滤器防止用户恶意登录行为
+
+令牌机制：相当与双岗机制，当用户在使用账号和密码登录成功之后，第一个岗位也就是登录也页					面会给用户一个新的令牌，这个令牌用于在调用资源文件前的第二次识别，只有两次都					识别通过了，才会将此资源文件返回到用户的浏览器上。
+
+​					恶意行为：他不会经过第一个岗位，即用户登录页面，拿不到想要的令牌，在第二次					识别的时候不会给他分配资源文件。
+
+​					恶意行为跨过的第一道岗位(用户登录岗位)，拿不到令牌，在第二道岗位的时候会被					拦截。
+
+```xml
+<!--在判定来访用户身份合法后，通过请求对象向Tomcat申请当前用户申请一个HttpSession-->
+<!--这个方法相当于在用户登录界面为该用户生成一个私人保险柜，只有在登录界面才能分配这个柜子，
+    而翻墙过来的黑客没有经过这个登录的页面，所有不会被分配到私人保险柜-->
+<!--这个是时候采用的这个getSeeion方法没有参数，代表不用判断，直接给用户创建一个新的私人保险	柜-->
+<!--整的登录过程中只有这一个地方使用的是getSession()不含参数的这个方法，其余的地方都是是使用的getSession(false)这个方法，有保险柜返回保险柜，没有不会新建保险柜，而是返回null-->
+HttpSession session = request.getSession();
+<!--索要当前用户在服务端的HttpSession-->
+<!--如果当前用户在这个服务端有柜子，返回这个柜子，否则返回NUll-->
+HttpSession session = request.getSession(false);   
+if(session == null){
+	response.sendRedirect("/myWeb/login_error.html");
+	return;
+}else{
+	
+}
+```
+
+
+
+## 25.JavaWeb总流程图
+
+<img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210723142725.png" style="zoom: 50%;" />
+
+<img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210723142823.png" style="zoom:50%;" />
+
+
+
+## 26.防止用户恶意登录（令牌机制的实现）
+
+此时在登录页面要显示一些相关的元素，比如登录框、文本框、JS代码等。这些要设置为login，这样做的目的是不用进行任何验证用户就可以看到使用这些元素。也就是直接放行，不进行过滤器的过滤。
+
+与登录页面有关的元素设置为 login ，直接放行。
+
+```Java
+HttpServletRequest request = (HttpServlrtRequest)servletRequset;
+HttpSession session = null;  
+// 1.调用请求对象读取请求对象包中的请求行的URI，了解用户的资源文件是谁
+// [/网站名/资源文件名] /myWeb/login.html or /myWeb/login
+String uri = request.getRequestUrI();   
+// 2.如果本次请求的资源文件与登录相关【login.html 或者 LoginServlet】此时应该无条件放行
+// indexOf会返回当前 login 这个字段在 uri这个字符串里边第一次出现的位置
+// 如果这个uri中不存在这个字符串将返回 -1，此时说明不能不是与登录相关的资源文件，不能放行
+// 如果不等于-1，说明在这个uri字符串里边包含,这个login，此时就代表这个文件是与我们登录相
+// 关的文件，进行直接无条件放行。 
+/*如果用户只写了要访问的网站名，并没有提供要访问的具体文件，此时根据网站默认欢迎文件的规则
+他会去web.xml文件里边寻找我们自定义的默认资源文件 login.html(这个文件也是自己写的) 之后进行调用*/
+if(uri.indexOf("login") != -1 || "/myWeb/".equals(uri)){
+    // 将拦截下来的请求对象与响应对象交还给 Tomcat进行放行处理
+    filterChain.doFilter(servletRequest,ServletResponse);
+    return;
+}
+// 3.如果本次请求访问的是其他资源文件，需要得到用户在服务端HttpSession
+// getSession(false); 如果服务端存在 HttpSession会将其返回，没有会返回null，不会创建
+session = request.getSession(false);
+// 判断用户存不存在HttpSession，如果存在就进行放行，如果不存在不放行（可能是黑客） 
+if(session != null){
+    // 合法的用户 将拦截下来的请求对象与响应对象交还给 Tomcat进行放行处理
+    filterChain.doFilter(servletRequest,ServletResponse);
+    return;
+}
+// 4.在服务端不存在Httpsession，此时认为是恶意登录，因该拒绝访问
+// login_error.htm 这个文件是自己在 Web 目录下文件夹，在里边编写一些不允许访问的说明
+request.getRequestDispatcher("/login_error.html").forward(servletRequest,ServletResponse);
+```
+

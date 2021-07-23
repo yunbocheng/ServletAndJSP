@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 public class OneServlet extends HttpServlet {
 
-    /*子啊地址栏的请求方式都是GET请求方式*/
+    /*在地址栏的请求方式都是GET请求方式*/
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
