@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="HttpServletRequest接口实现数据共享">
+    <output-path>$PROJECT_DIR$/out/artifacts/HttpServletRequest</output-path>
+    <root id="root">
+      <element id="archive" name="HttpServletRequest.jar">
+        <element id="module-output" name="HttpServletRequest接口实现数据共享" />
+      </element>
+    </root>
+  </artifact>
+</component>

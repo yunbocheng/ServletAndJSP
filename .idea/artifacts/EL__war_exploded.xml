@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="EL-将引用对象属性内容写入到响应体:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/EL__war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="EL-将引用对象属性内容写入到响应体/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="EL-将引用对象属性内容写入到响应体" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

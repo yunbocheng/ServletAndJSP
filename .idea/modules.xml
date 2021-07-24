@@ -3,6 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Cookie订餐会员卡/Cookie订餐会员卡.iml" filepath="$PROJECT_DIR$/Cookie订餐会员卡/Cookie订餐会员卡.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EL-EL表达式内置对象/EL-EL表达式内置对象.iml" filepath="$PROJECT_DIR$/EL-EL表达式内置对象/EL-EL表达式内置对象.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EL-EL表达式常见异常/EL-EL表达式常见异常.iml" filepath="$PROJECT_DIR$/EL-EL表达式常见异常/EL-EL表达式常见异常.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EL-EL表达式支持运算/EL-EL表达式支持运算.iml" filepath="$PROJECT_DIR$/EL-EL表达式支持运算/EL-EL表达式支持运算.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EL-EL表达式简化版/EL-EL表达式简化版.iml" filepath="$PROJECT_DIR$/EL-EL表达式简化版/EL-EL表达式简化版.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EL-传统JSP开发步骤/EL-传统JSP开发步骤.iml" filepath="$PROJECT_DIR$/EL-传统JSP开发步骤/EL-传统JSP开发步骤.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EL-将引用对象属性内容写入到响应体/EL-将引用对象属性内容写入到响应体.iml" filepath="$PROJECT_DIR$/EL-将引用对象属性内容写入到响应体/EL-将引用对象属性内容写入到响应体.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpServletRequest接口介绍/HttpServletRequest接口介绍.iml" filepath="$PROJECT_DIR$/HttpServletRequest接口介绍/HttpServletRequest接口介绍.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpServletRequest接口实现数据共享/HttpServletRequest接口实现数据共享.iml" filepath="$PROJECT_DIR$/HttpServletRequest接口实现数据共享/HttpServletRequest接口实现数据共享.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpServletResponse接口介绍/HttpServletResponse接口介绍.iml" filepath="$PROJECT_DIR$/HttpServletResponse接口介绍/HttpServletResponse接口介绍.iml" />
@@ -10,9 +16,11 @@
       <module fileurl="file://$PROJECT_DIR$/JSP文件Java命令书写规则/JSP文件Java命令书写规则.iml" filepath="$PROJECT_DIR$/JSP文件Java命令书写规则/JSP文件Java命令书写规则.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP文件使用展示/JSP文件使用展示.iml" filepath="$PROJECT_DIR$/JSP文件使用展示/JSP文件使用展示.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP文件内置Java对象/JSP文件内置Java对象.iml" filepath="$PROJECT_DIR$/JSP文件内置Java对象/JSP文件内置Java对象.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSP调用原理分析/JSP调用原理分析.iml" filepath="$PROJECT_DIR$/JSP调用原理分析/JSP调用原理分析.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaWebProject.iml" filepath="$PROJECT_DIR$/.idea/JavaWebProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServletContext/ServletContext.iml" filepath="$PROJECT_DIR$/ServletContext/ServletContext.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServletContextAttributeListener接口/ServletContextAttributeListener接口.iml" filepath="$PROJECT_DIR$/ServletContextAttributeListener接口/ServletContextAttributeListener接口.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Servlet与JSP联合调用案列/Servlet与JSP联合调用案列.iml" filepath="$PROJECT_DIR$/Servlet与JSP联合调用案列/Servlet与JSP联合调用案列.iml" />
       <module fileurl="file://$PROJECT_DIR$/在线考试管理系统开发环境搭建/在线考试管理系统开发环境搭建.iml" filepath="$PROJECT_DIR$/在线考试管理系统开发环境搭建/在线考试管理系统开发环境搭建.iml" />
       <module fileurl="file://$PROJECT_DIR$/在线考试管理系统开发环境搭建1/在线考试管理系统开发环境搭建1.iml" filepath="$PROJECT_DIR$/在线考试管理系统开发环境搭建1/在线考试管理系统开发环境搭建1.iml" />
       <module fileurl="file://$PROJECT_DIR$/多个Servlet之间的请求规则/多个Servlet之间的请求规则.iml" filepath="$PROJECT_DIR$/多个Servlet之间的请求规则/多个Servlet之间的请求规则.iml" />

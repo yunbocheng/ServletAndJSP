@@ -199,6 +199,7 @@
      <welcome-file-list>
      
      <welcome-file>index.html</welcome-file>
+     <welcome-file>index.html</welcome-file>
      
      <welcome-file>index.htm</welcome-file>
      
