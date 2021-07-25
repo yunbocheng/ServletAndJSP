@@ -174,8 +174,11 @@
 ![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210724224709.png)
 输出的结果：
 ![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210724224819.png)
-   
 ## 10.EL表达式常见异常
+
+
+
+**以下程序报错的原因：Student中的全局变量为 sname，而在index_1.jsp写成了name导致在index_1.jsp中找不到 name 这个属性，此时会发生对象中没有找到指定属性错误**
 
 ![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210724231326.png)
 
