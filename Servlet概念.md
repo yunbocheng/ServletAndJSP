@@ -314,7 +314,7 @@
 
    ​					中location属性地址发起第二次请求，访问TweServlet去完成剩下的任务。
 
-   <img src="C:/Users/YunboCheng/AppData/Roaming/Typora/typora-user-images/image-20210720104744935.png" alt="image-20210720104744935" style="zoom: 50%;" />
+   <img src="https://gitee.com/YunboCheng/imageBad/raw/master/image/20210729183409.png" style="zoom: 67%;" />
 
 2. 实现命令：
 
