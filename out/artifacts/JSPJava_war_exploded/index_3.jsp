@@ -16,3 +16,13 @@
 变量num2的值：<%=num2%><br>
 <!--执行标记还可以通知JSP将运算符结果写入到响应体-->
 num1 + num2 = <%=num1+num2%>
+
+<div class="mydiv">天气</div>
+<style>
+    .mydiv{
+        color: red;
+        background: yellow;
+        height: 40px;
+        width: 60px;
+    }
+</style>

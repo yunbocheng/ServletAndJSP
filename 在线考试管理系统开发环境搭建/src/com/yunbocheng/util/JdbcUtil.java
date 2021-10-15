@@ -56,7 +56,7 @@ public class JdbcUtil {
         }
     }
 
-    // select ps,con,rs
+    // select ps,con,rs 使用了方法的重载
     public void close(ResultSet rs){
         if (rs != null) {
             try {

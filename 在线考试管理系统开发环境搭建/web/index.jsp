@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  欢迎使用信息注册系统
   </body>
 </html>

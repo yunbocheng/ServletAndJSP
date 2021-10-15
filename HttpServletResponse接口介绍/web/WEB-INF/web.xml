@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
         <servlet-name>oneSrevlet</servlet-name>
-        <servlet-class>com.com.yunbocheng.controller.OneServlet</servlet-class>
+        <servlet-class>com.yunbocheng.controller.OneServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -15,7 +15,7 @@
 
     <servlet>
         <servlet-name>TwoSrevlet</servlet-name>
-        <servlet-class>com.com.yunbocheng.controller.TwoServlet</servlet-class>
+        <servlet-class>com.yunbocheng.controller.TwoServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -25,7 +25,7 @@
 
     <servlet>
         <servlet-name>ThreeSrevlet</servlet-name>
-        <servlet-class>com.com.yunbocheng.controller.ThreeServlet</servlet-class>
+        <servlet-class>com.yunbocheng.controller.ThreeServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -35,7 +35,7 @@
 
     <servlet>
         <servlet-name>FourSrevlet</servlet-name>
-        <servlet-class>com.com.yunbocheng.controller.FourServlet</servlet-class>
+        <servlet-class>com.yunbocheng.controller.FourServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

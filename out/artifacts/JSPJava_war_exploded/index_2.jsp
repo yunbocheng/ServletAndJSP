@@ -16,7 +16,7 @@
   int num3 = num1 + num2;  // 数学运算
   int num4 = num1>num2?num1:num2;
   boolean num5 = num2>=200 && num1>=100;
-  // 3.声明控制语句
+  // 3.句声明控制语
   if(num2 > num1){
 
   }else {

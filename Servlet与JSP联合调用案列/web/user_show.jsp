@@ -24,10 +24,11 @@
         for (int i = 0; i < studentListList.size(); i++) {
     %>
         <tr>
-            <td><%=studentListList.get(i).getSid()%></td>
+            <td>${studentListList.get(i).Sname}</td>
             <td><%=studentListList.get(i).getSname()%></td>
         </tr>
     <%
         }
     %>
+
 </table>

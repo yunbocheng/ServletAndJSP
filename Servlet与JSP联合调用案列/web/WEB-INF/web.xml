@@ -5,12 +5,12 @@
          version="4.0">
 
     <servlet>
-        <servlet-name>OneSrevlet</servlet-name>
+        <servlet-name>TwoServlet</servlet-name>
         <servlet-class>com.yunbocheng.controller.OneServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>OneSrevlet</servlet-name>
+        <servlet-name>TwoServlet</servlet-name>
         <url-pattern>/one</url-pattern>
     </servlet-mapping>
 </web-app>

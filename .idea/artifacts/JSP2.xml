@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="JSP文件使用展示2">
+    <output-path>$PROJECT_DIR$/out/artifacts/JSP2</output-path>
+    <root id="root">
+      <element id="archive" name="JSP.jar">
+        <element id="module-output" name="JSP文件使用展示" />
+      </element>
+    </root>
+  </artifact>
+</component>

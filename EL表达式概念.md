@@ -36,7 +36,7 @@
 - EL表达式在JSP文件上使用
 - 负责在JSP文件上从作用域对象读取指定的共享数据并输出到响应体
 
-## 4.JSP文件可以使用的作用域丢对象
+## 4.JSP文件可以使用的作用域对象
 
 **注意：JSP有四个作用域对象，Servlet有三个作用域对象**
 
@@ -58,9 +58,9 @@
 
    ​					并自动将属性值的结果写入到响应体。
 
-3. 属性名：一定要与引用类型属性名完全一致，包括大小写。
+3. 属性名：**属性名一定要与引用类型(对象)属性名完全一致，包括大小写。**
 
-   ​				不论这个属性是私有的还是公有的都可以直接调用
+   ​				**不论这个属性是私有的还是公有的都可以直接调用**
 
    ​				因为EL表达式使用的是反射机制，通过反射机制来
 
@@ -185,4 +185,160 @@
 ![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210724231349.png)
 
 > javax.el.PropertyNotFoundException : 在对象中没有找到指定属性
+
+
+
+
+
+### 1.EL表达式介绍
+
+- EL(Expression Language )，表达式语言。是一种在JSP页面中 **获取数据**的简单方式。EL表达式的基本语法很简单：在JSP页面的**任何静态部分**均可以通过 **${experssion}**的形式获取指定表达式的值。
+
+### 2. EL表达式获取数据方式
+
+- **EL只能从四大域中获取数据。**其查找顺序是：依此按照**由小到大的范围**从四大域名中查找指定名称的属性值。
+- **四大域名的范围大小：application>session>request>pageContext**
+- 注意：在Servlet中只有三个作用域，没有pageContext作用域。
+
+```jsp
+<%
+	String username = "今天天气不错";
+%>
+username = ${username } <br>   <%--获取不到这个username属性值--%>
+
+<%
+	String username = "今天天气不错";
+	pageContext.setAttribute("username",username);
+	request.setAttribute("username",username);
+%>
+username = ${username }<br>  <%--输出结果：username=--%>
+
+<%
+ 	pageContext.setAttribute("username","北京");
+	request.setAttribute("username","上海");
+	session.serAttribute("username","重庆");
+	application.setAttribute("username","武汉");
+%>
+username = ${username }<br> <%---输出结果：username=北京--%>
+
+```
+
+### 3.使用EL表达式提供的作用域别名来获取数据
+
+- JSP中为四大作用域提供了作用域别名
+
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20210724170026.png)
+
+```jsp
+<%
+ 	pageContext.setAttribute("username","北京");
+	request.setAttribute("username","上海");
+	session.serAttribute("username","重庆");
+	application.setAttribute("username","武汉");
+%>
+username = ${pageScope.username}<br> <%---输出结果：username=北京--%>
+username = ${sessionScope.username}<br>  <%--输出结果：username=重庆--%>
+```
+
+### 4.获取对象的属性值
+
+- 定义一个student类，在JSP文件中使用EL表达式来获取student的属性
+
+**注意：EL表达式中的这个属性并不是student类中的成员变量名，而是getName()、getAge()去掉get以及括号将Age改为小写age，这个才是EL表达式的属性值，一般情况下属性值等于student类中的成员变量名，但是boolean类型的属性值和成员变量的不相等的。boolean类型的成员变量的获取成员变量的方式是isSex()，所以对应的EL表达式的属性值是sex。**
+
+```jsp
+<body>
+	<%
+		Student student = new Student("张三",23);
+		pageConntext.setAttribute("student",student);
+	%>
+	
+	student = ${student}  <%--可以获取到student的信息(重写了toString()方法)--%>
+	<%--EL表达式属性值要和student类中的属性相对应--%>
+	name = ${student.name} <%--获取到student对象的name值--%>
+	age = ${student.age} <%--获取到student对象的name值--%>
+	
+    name = ${student['name']} <%--获取到student对象的name值--%>
+	age = ${student['age']} <%--获取到student对象的name值--%>
+
+</body>
+```
+
+### 5.几种特殊的属性值
+
+- 当一个类不存在的时候，要获取这个类中属性。此时不会抛出空指针异常，其仅仅是不显示而已。
+
+```jsp
+name = ${student1.name}   <%--此时的输出结果是：name=  --%>
+```
+
+- 当student类中声明了一个school类的时候，要获取到school类中的属性值，此时使用多次点的方式。
+
+```jsp
+school = ${student.school.sname}  <%-- 此时获取到的是student类中调用的school类中的snames属性值-->
+```
+
+### 6. EL访问数组(Array)
+
+- 访问普通的数组
+
+```jsp
+<%
+	String[] name = new String[]{"李四","张三","王五"};
+	pageContext.setAttribute("names",name);
+%>
+name[1] = ${names[1]}   <%--取出的数据为：张三--%>
+
+<%--若访问的数组元素的下标超过了数组下标最大值，EL不会输出下标越界异常--%>
+name[5] = ${name[5]} 
+```
+
+- 访问对象数组
+
+```jsp
+<%
+	Student[] students = new Student[2];
+	students[0] = new Student("张三",20);
+	student[1] = new Student("李四",30);
+	pageContext.setAttribute("students",students);
+%>
+student[0].name = ${student[0].name}  <%--输出的结果为：张三--%>
+student[1].age = ${student[1].age}  <%--输出的结果为：30--%>
+```
+
+###  7. EL访问集合(List)
+
+- **EL表达式可以通过索引访问List集合，但无法访问Set。因为Set中不存在索引。**
+
+```
+<%
+	List<Sting> names = new ArrayList<>();
+	names.add("张三");
+	names.add("李四");
+	names.add("王五");
+	pageContext.setAttribute("names",names);
+%>
+<%--第一个输出结果为王五，和上边一样，不会报下标越界异常--%>
+name[2] = ${name[2]}
+name[200] = ${name[200]}
+```
+
+### 8. EL访问Map集合(map)
+
+- **Map中可以使用key来获取到values值**
+
+```jsp
+<%
+	// map集合中存储的是Object类型。可以存储任意类型
+	Map<String,Object> map = new HashMap<>();
+	map.put("student",new Student("张三",age));
+	map.put("mobile","123456");
+	map.put("age",20);
+	pageContext.setAttribute("map",map);
+%>
+<%--这里发生了一个类型的向下转型，将Object类型转换为student类型--%>
+student.name = ${mpa.student.name}
+mobile = ${map.mobile}
+age = ${map.age}
+```
 
