@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <!--对标签库的配置-->
+    <tlib-version>1.0</tlib-version>
+    <!--自定义名字，一般和tld文件名保持一致-->
+    <short-name>ct</short-name>
+    <!--自定义uri，可以随便写-->
+    <uri>http://com.yunbocheng/jsp/tags/custom</uri>
+
+    <!--注册标签-->
+    <tag>
+        <!--这个是描述信息-->
+        <description>Outputs Hello, World</description>
+        <!--自定义标签的名字-->
+        <name>clientIp</name>
+        <!--这个代表的是获取客户端Ip地址的方法的类的路路径-->
+        <tag-class>com.yunbocheng.ClientIpTag</tag-class>
+        <!--这个代表当前标签有没有标签体 empty是空的意思-->
+        <body-content>empty</body-content>
+    </tag>
+</taglib>

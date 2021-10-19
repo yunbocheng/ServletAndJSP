@@ -4,7 +4,7 @@
 - 由Java技术开发一个jar包
 - 作用是降低JSP文件开发时Java命令开发强度
 - Tomcat服务器本身自带了一个EL工具包（Tomcat安装地址/lib/el-api.jar）
-
+  
 ## 2.JSP文件作用
 
 > 代替响应体对象将Servlet中doGet,doPost的执行结果写入到响应体
@@ -193,6 +193,7 @@
 ### 1.EL表达式介绍
 
 - EL(Expression Language )，表达式语言。是一种在JSP页面中 **获取数据**的简单方式。EL表达式的基本语法很简单：在JSP页面的**任何静态部分**均可以通过 **${experssion}**的形式获取指定表达式的值。
+- **EL表达式只能处理四大域中的属性值以及常量**
 
 ### 2. EL表达式获取数据方式
 
@@ -341,4 +342,90 @@ student.name = ${mpa.student.name}
 mobile = ${map.mobile}
 age = ${map.age}
 ```
+
+### 9.EL表达式中的运算符
+
+- EL表达式支持的运算符
+
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20211015083403.png)
+
+- 除了上述运算符之外，非常重要的运算符 **empty，这个运算符用于判断变量值是否为空，其用法为${empty 变量}，如果变量为空则返回true**
+  - 若变量为定义，返回值是 true
+  - 若变量为String类型，且其值为空串，则返回 true
+  - 若变量为引用和类型，且其值为null，则返回 true
+  - 若变量为集合类型，且不包含任何元素，则返回true
+
+![image-20211015084509505](https://gitee.com/YunboCheng/imageBad/raw/master/image/image-20211015084509505.png)
+
+### 10. EL内置对象
+
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20211015084641.png)
+
+- 就像JSP一样代码以及表达式中可以使用九个内置对象一样，EL表达式中，同样也存在内置对象，并且存在11个内置对象。
+
+#### 10.1 pageContext内置对象
+
+- 该pageComtext与JSP内置对象中的pageContext是同一个对象。**通过该对象，可以获取到request、response、session、servletContext、servletConfig等对象。**注意：这些对象不是EL中的内置对象。**这些对象只能pageContext获取。**
+- 在EL表达式中可以通过 **${pageContext.request}获取request对象。**其底层实际调用的pageContext.getRequest()方法。同理，也可以通过类似的方式获取到其他对象。
+- 在这些获取的对象中，有一个是实际工程中最常用的：**${pageContext.request.contextPath}，用于获取当前项目的发布到服务器的名称。一般用在JSP页面的路径前。**
+- **${pageContext.reuquest.contextPath}代表是的当前的项目，registerServler代表的是将该JSP文件中的数据提交到的位置文件。**
+
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20211015091246.png)
+
+- 注意：EL表达式只能用于JSP文件。
+
+- **在EL表达式的11个内置对象中，除了pageContext外，其他10个内置对象，其类型均为java.util.Map类型**
+
+#### 10.2 EL表达式中与参数相关的内置对象
+
+#### 10.2.1 param对象
+
+- ${param.属性值}：底层调用的是 **request.getParameter()方法，这个方法获取到的是一个属性对应的一个值。**
+
+- param对象用来获取请求信息中的参数信息。
+- **使用form提交表单可以将请求参数传递到任何的文件(Java、JSP都可以)**
+
+```jsp
+<%--提交界面--%>
+<body>
+	<form action=""${pageContext.request.contextPath}/show.jsp" method="get">
+		姓名：<input type="text" name="name"/><br>
+		年龄：<input type="text" name="age"/><br>
+		<input type="submit" value="注册"/>
+	</form>
+</body>
+```
+
+- 在提交界面中给定请求参数的属性值
+
+![image-20211015152256303](https://gitee.com/YunboCheng/imageBad/raw/master/image/image-20211015152256303.png)
+
+```jsp
+<%--获取请求参数界面，获取请求中的指定参数值,其底层实际调用的是request.getParameter--%>
+name = ${param.name}<br>
+age = ${param.age}<br>
+```
+
+- 在结果界面(show.jsp)中显示获取到的请求参数值
+
+![](https://gitee.com/YunboCheng/imageBad/raw/master/image/20211015152413.png)
+
+#### 10.2.1 paramValues对象
+
+- ${paramValue.属性值}：这个属性底层调用的是 **req.getParameterValues()，这个方法获取到的属性的属性值有多个，获取到的是一个结果的集合。**
+
+### 11. EL表达式不支持对字符串的处理
+
+```jsp
+${"ab" + "c"} <%--会报错--%>
+```
+
+### 12. EL表达式总结
+
+- EL不能出现在Java代码块、表达式块等JSP动态部分。
+- EL只能从pageContext、request、session、application四大域属性空间中获取数据。
+- EL表达式只能获取数据，不可以修改数据。
+- EL表达式不会抛出空指针异常，若访问一个null对象的属性，则什么也不显示。
+- EL不会抛出数组下标越界已异常，若访问一个数组中的不存在的元素，则什么也不显示。
+- EL不具备对字符串进行处理的能力，旧连简单的字符串拼接都不可以（此时需要使用JSTL中提供的标准标签中的方法来处理字符串。）
 

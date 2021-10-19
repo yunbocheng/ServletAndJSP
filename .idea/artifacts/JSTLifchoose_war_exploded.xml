@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JSTL标签库if标签与choose标签:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JSTLifchoose_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JSTL标签库if标签与choose标签/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jsp-api" />
+          <element id="library" level="project" name="jstl1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

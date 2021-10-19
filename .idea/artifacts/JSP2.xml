@@ -5,6 +5,7 @@
       <element id="archive" name="JSP.jar">
         <element id="module-output" name="JSP文件使用展示" />
       </element>
+      <element id="library" level="project" name="jsp-api (9)" />
     </root>
   </artifact>
 </component>

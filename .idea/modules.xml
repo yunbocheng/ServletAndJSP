@@ -13,10 +13,17 @@
       <module fileurl="file://$PROJECT_DIR$/HttpServletRequest接口实现数据共享/HttpServletRequest接口实现数据共享.iml" filepath="$PROJECT_DIR$/HttpServletRequest接口实现数据共享/HttpServletRequest接口实现数据共享.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpServletResponse接口介绍/HttpServletResponse接口介绍.iml" filepath="$PROJECT_DIR$/HttpServletResponse接口介绍/HttpServletResponse接口介绍.iml" />
       <module fileurl="file://$PROJECT_DIR$/HttpSession接口-购物车管理系统/HttpSession接口-购物车管理系统.iml" filepath="$PROJECT_DIR$/HttpSession接口-购物车管理系统/HttpSession接口-购物车管理系统.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSEL核心标签库out标签/JSEL核心标签库out标签.iml" filepath="$PROJECT_DIR$/JSEL核心标签库out标签/JSEL核心标签库out标签.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP文件Java命令书写规则/JSP文件Java命令书写规则.iml" filepath="$PROJECT_DIR$/JSP文件Java命令书写规则/JSP文件Java命令书写规则.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP文件使用展示/JSP文件使用展示.iml" filepath="$PROJECT_DIR$/JSP文件使用展示/JSP文件使用展示.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP文件内置Java对象/JSP文件内置Java对象.iml" filepath="$PROJECT_DIR$/JSP文件内置Java对象/JSP文件内置Java对象.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP调用原理分析/JSP调用原理分析.iml" filepath="$PROJECT_DIR$/JSP调用原理分析/JSP调用原理分析.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSTL与EL表达式/JSTL与EL表达式.iml" filepath="$PROJECT_DIR$/JSTL与EL表达式/JSTL与EL表达式.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSTL标签库if标签与choose标签/JSTL标签库if标签与choose标签.iml" filepath="$PROJECT_DIR$/JSTL标签库if标签与choose标签/JSTL标签库if标签与choose标签.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSTL核心标签库forEach标签/JSTL核心标签库forEach标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签库forEach标签/JSTL核心标签库forEach标签.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSTL核心标签库remove域catch标签/JSTL核心标签库remove域catch标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签库remove域catch标签/JSTL核心标签库remove域catch标签.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSTL核心标签库/JSTL核心标签库set标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签库/JSTL核心标签库set标签.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSTL核心标签格式化日期标签/JSTL核心标签格式化日期标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签格式化日期标签/JSTL核心标签格式化日期标签.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaWebProject.iml" filepath="$PROJECT_DIR$/.idea/JavaWebProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServletContext/ServletContext.iml" filepath="$PROJECT_DIR$/ServletContext/ServletContext.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServletContextAttributeListener接口/ServletContextAttributeListener接口.iml" filepath="$PROJECT_DIR$/ServletContextAttributeListener接口/ServletContextAttributeListener接口.iml" />
@@ -25,6 +32,7 @@
       <module fileurl="file://$PROJECT_DIR$/在线考试管理系统开发环境搭建1/在线考试管理系统开发环境搭建1.iml" filepath="$PROJECT_DIR$/在线考试管理系统开发环境搭建1/在线考试管理系统开发环境搭建1.iml" />
       <module fileurl="file://$PROJECT_DIR$/多个Servlet之间的请求规则/多个Servlet之间的请求规则.iml" filepath="$PROJECT_DIR$/多个Servlet之间的请求规则/多个Servlet之间的请求规则.iml" />
       <module fileurl="file://$PROJECT_DIR$/监听器接口ServletContextListener接口/监听器接口ServletContextListener接口.iml" filepath="$PROJECT_DIR$/监听器接口ServletContextListener接口/监听器接口ServletContextListener接口.iml" />
+      <module fileurl="file://$PROJECT_DIR$/自定义标签/自定义标签.iml" filepath="$PROJECT_DIR$/自定义标签/自定义标签.iml" />
       <module fileurl="file://$PROJECT_DIR$/过滤器接口检测请求合法性/过滤器接口检测请求合法性.iml" filepath="$PROJECT_DIR$/过滤器接口检测请求合法性/过滤器接口检测请求合法性.iml" />
       <module fileurl="file://$PROJECT_DIR$/过滤器请求对象增强处理服务/过滤器请求对象增强处理服务.iml" filepath="$PROJECT_DIR$/过滤器请求对象增强处理服务/过滤器请求对象增强处理服务.iml" />
     </modules>

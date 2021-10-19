@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JSTL核心标签库remove域catch标签:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JSTLremovecatch_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JSTL核心标签库remove域catch标签/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JSTL核心标签库remove域catch标签" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -12,7 +12,7 @@ public class TwoServlet extends HttpServlet {
 
         // 1. 将数据添加到请求作用域对象，作为共享数据
         req.setAttribute("key1","hello world");
-        // 2. 代替浏览器，向Tomcat索要TwoServlet来完成剩余任务
+        // 2. 代替浏览器，向Tomcat索要TwoServlet来完成剩余任务，重定向，将页面跳转到指定的页面
         req.getRequestDispatcher("/two").forward(req,resp);
 
     }

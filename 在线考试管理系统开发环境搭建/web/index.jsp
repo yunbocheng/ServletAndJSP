@@ -7,10 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+  <head content="a" title="1">
     <title>$Title$</title>
+    <style>
+      body{
+        color: red;
+
+      }
+    </style>
   </head>
-  <body>
+  <body style="color: red;background: pink">
   欢迎使用信息注册系统
   </body>
 </html>
