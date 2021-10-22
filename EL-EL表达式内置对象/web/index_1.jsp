@@ -11,5 +11,5 @@
     Http://localhost:8080/myWeb/index_1.jsp?userName=mike&password=123
 -->
 
-来访者姓名：${param.userName}<br/>
-来访者密码：${param.password}
+来访者姓名：${param.userName}<br/>  <%--此时获取到的是mike--%>
+来访者密码：${param.password} <%--此时获取到的是123--%>

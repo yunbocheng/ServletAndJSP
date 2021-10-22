@@ -22,8 +22,8 @@
       <module fileurl="file://$PROJECT_DIR$/JSTL标签库if标签与choose标签/JSTL标签库if标签与choose标签.iml" filepath="$PROJECT_DIR$/JSTL标签库if标签与choose标签/JSTL标签库if标签与choose标签.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSTL核心标签库forEach标签/JSTL核心标签库forEach标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签库forEach标签/JSTL核心标签库forEach标签.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSTL核心标签库remove域catch标签/JSTL核心标签库remove域catch标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签库remove域catch标签/JSTL核心标签库remove域catch标签.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JSTL核心标签库/JSTL核心标签库set标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签库/JSTL核心标签库set标签.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JSTL核心标签格式化日期标签/JSTL核心标签格式化日期标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签格式化日期标签/JSTL核心标签格式化日期标签.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSTL核心标签库set和out标签/JSTL核心标签库set和out标签.iml" filepath="$PROJECT_DIR$/JSTL核心标签库set和out标签/JSTL核心标签库set和out标签.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSTL格式化标签库/JSTL格式化标签库.iml" filepath="$PROJECT_DIR$/JSTL格式化标签库/JSTL格式化标签库.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaWebProject.iml" filepath="$PROJECT_DIR$/.idea/JavaWebProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServletContext/ServletContext.iml" filepath="$PROJECT_DIR$/ServletContext/ServletContext.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServletContextAttributeListener接口/ServletContextAttributeListener接口.iml" filepath="$PROJECT_DIR$/ServletContextAttributeListener接口/ServletContextAttributeListener接口.iml" />

@@ -1,6 +1,9 @@
 # EL技术
 
 ## 1.EL工具包介绍
+
+**EL表达式只能显示单个数据，如果需要显示多个数据需要使用JSTL标签**
+
 - 由Java技术开发一个jar包
 - 作用是降低JSP文件开发时Java命令开发强度
 - Tomcat服务器本身自带了一个EL工具包（Tomcat安装地址/lib/el-api.jar）

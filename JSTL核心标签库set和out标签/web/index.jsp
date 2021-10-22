@@ -3,6 +3,7 @@
 <%@ page import="java.util.Map" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--先导入JSTL的核心标签库--%>
+<%--这里的c标签可以任意改变，官方给的是c，一般使用官方给的即可。--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
@@ -65,5 +66,8 @@
   <c:set value="24" property="age" target="${pageScope.map}"></c:set>
   name = ${map.name} <br>
   age = ${map.age} <br>
+
+  <%--==============c:set 为Map集合中的属性赋值====================--%>
+  <c:out value="${name }"></c:out>
   </body>
 </html>

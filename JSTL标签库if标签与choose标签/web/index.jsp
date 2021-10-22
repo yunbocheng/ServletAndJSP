@@ -20,6 +20,10 @@
 
 
   <br> --------------------- c:choose 标签 --------------------<br>
+  <%--记住：这个标签和Java中的switch用法几乎一样，从上往下进行匹配，配到到一个不会在向下匹配，直接跳出这个choose标签--%>
+  <%--otherwise必须写在when标签之后，也就是choose选择标签的最后，这个相当于switch中的default--%>
+  <%--when可以存在多个相当于case，otherwise相当于default--%>
+
   <c:set var="pageon" value="1"/>
   <c:set var="totalPages" value="5"/>
   <c:choose>
@@ -31,7 +35,7 @@
     <c:when test="${pageon == totalPages}">
       <a href="#">首页</a> <a href="#">上一页</a> 下一页 尾页 当前页码
     </c:when>
-    <%--中间页（四个按钮都可用）--%>
+    <%--中间页（四个按钮都可用），中间页的形式都是一样的，相当于switch中的default--%>
     <c:otherwise>
       <a href="#">首页</a> <a href="#">上一页</a> <a href="">下一页</a> <a href="">尾页</a>
     </c:otherwise>

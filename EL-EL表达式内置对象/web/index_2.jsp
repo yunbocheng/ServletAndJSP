@@ -10,6 +10,8 @@
 <!--
 Http://localhost:8080/myWeb/index_2.jsp?pageNo=1&pageNo=2&pageNo=3
 -->
-第一个部门：${paramValues.pageNo[0]}<br/>
-第二个部门：${paramValues.pageNo[1]}<br/>
-第三个部门：${paramValues.pageNo[2]}<br/>
+
+<%--此时传递的参数相当于一个数组--%>
+第一个部门：${paramValues.pageNo[0]}<br/> <%--此时获取的是这个数组中的第一个元素,1--%>
+第二个部门：${paramValues.pageNo[1]}<br/> <%--此时获取的是这个数组中的第一个元素,2--%>
+第三个部门：${paramValues.pageNo[2]}<br/> <%--此时获取的是这个数组中的第一个元素,3--%>

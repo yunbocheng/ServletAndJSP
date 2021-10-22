@@ -5,7 +5,7 @@
       <element id="javaee-facet-resources" facet="JSTL核心标签格式化日期标签/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="JSTL核心标签格式化日期标签" />
+          <element id="module-output" name="JSTL格式化标签库" />
         </element>
       </element>
     </root>
